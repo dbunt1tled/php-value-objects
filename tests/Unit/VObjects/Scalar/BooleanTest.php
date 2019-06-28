@@ -9,6 +9,9 @@ use DBUnt1tled\Test\MyCase;
 
 final class BooleanTest extends MyCase
 {
+    /**
+     * @throws \ReflectionException
+     */
     public function testBoolean(): void
     {
         $boolean = new \DBUnt1tled\VO\VObjects\Scalar\Boolean(true);
@@ -29,6 +32,10 @@ final class BooleanTest extends MyCase
         $this->assertEquals('true', (string)$booleanInt);
         $this->assertEquals('false', (string)$booleanString0);
     }
+
+    /**
+     * @throws \ReflectionException
+     */
     public function testLogic(): void
     {
         $bTrue = new \DBUnt1tled\VO\VObjects\Scalar\Boolean(true);

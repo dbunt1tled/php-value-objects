@@ -11,7 +11,10 @@ use DBUnt1tled\VO\VObjects\Scalar\Strings;
 
 final class UrlTest extends MyCase
 {
-    public function testName(): void
+    /**
+     * @throws \ReflectionException
+     */
+    public function testUrl(): void
     {
         $url1 = new Url(new Strings('http://localhost'));
         $this->assertEquals('http://localhost', $url1->getValue());

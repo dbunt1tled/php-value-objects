@@ -11,7 +11,10 @@ use DBUnt1tled\VO\VObjects\Scalar\Strings;
 
 final class EmailTest extends MyCase
 {
-    public function testName(): void
+    /**
+     * @throws \ReflectionException
+     */
+    public function testEmail(): void
     {
         $email1 = new Email(new Strings('admin@example.com'));
         $this->assertEquals('admin@example.com', $email1->getValue());

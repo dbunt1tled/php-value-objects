@@ -11,7 +11,10 @@ use DBUnt1tled\VO\VObjects\Scalar\Strings;
 
 final class Ip4AddressTest extends MyCase
 {
-    public function testName(): void
+    /**
+     * @throws \ReflectionException
+     */
+    public function testIp4Address(): void
     {
         $ip1 = new Ip4Address(new Strings('127.0.0.1'));
         $this->assertEquals('127.0.0.1', $ip1->getValue());

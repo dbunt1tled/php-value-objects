@@ -11,7 +11,10 @@ use DBUnt1tled\VO\VObjects\Scalar\Strings;
 
 final class UuidTest extends MyCase
 {
-    public function testName(): void
+    /**
+     * @throws \ReflectionException
+     */
+    public function testUuid(): void
     {
         $uuid1 = new Uuid(new Strings('bbc5637a-999e-11e9-a2a3-2a2ae2dbcce4'));
         $this->assertEquals('bbc5637a-999e-11e9-a2a3-2a2ae2dbcce4', $uuid1->getValue());

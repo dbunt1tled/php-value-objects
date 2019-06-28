@@ -11,7 +11,10 @@ use DBUnt1tled\VO\VObjects\Scalar\Strings;
 
 final class NameExtendedTest extends MyCase
 {
-    public function testName(): void
+    /**
+     * @throws \ReflectionException
+     */
+    public function testNameExtended(): void
     {
         $sJW = new NameExtended(new Strings('John'), new Strings('Wick'), new Strings('Wilson'));
         $this->assertEquals('John', $sJW->getFirstName());

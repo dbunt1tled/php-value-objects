@@ -9,7 +9,10 @@ use DBUnt1tled\VO\Exception\InvalidVOArgumentException;
 
 final class IntegerTest extends MyCase
 {
-    public function testBoolean(): void
+    /**
+     * @throws \ReflectionException
+     */
+    public function testInteger(): void
     {
         $i12 = new \DBUnt1tled\VO\VObjects\Scalar\Integer(12);
         $i23 = \DBUnt1tled\VO\VObjects\Scalar\Integer::createFromString('23');

@@ -11,6 +11,9 @@ use DBUnt1tled\VO\VObjects\Scalar\Strings;
 
 final class NameTest extends MyCase
 {
+    /**
+     * @throws \ReflectionException
+     */
     public function testName(): void
     {
         $sJW = new Name(new Strings('John'), new Strings('Wick'));

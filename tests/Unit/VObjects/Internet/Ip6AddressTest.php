@@ -11,7 +11,10 @@ use DBUnt1tled\VO\VObjects\Scalar\Strings;
 
 final class Ip6AddressTest extends MyCase
 {
-    public function testName(): void
+    /**
+     * @throws \ReflectionException
+     */
+    public function testIp6Address(): void
     {
         $ip1 = new Ip6Address(new Strings('2001:0db8:11a3:09d7:1f34:8a2e:07a0:765d'));
         $this->assertEquals('2001:0db8:11a3:09d7:1f34:8a2e:07a0:765d', $ip1->getValue());

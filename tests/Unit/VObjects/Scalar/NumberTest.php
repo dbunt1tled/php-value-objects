@@ -9,7 +9,10 @@ use DBUnt1tled\VO\Exception\InvalidVOArgumentException;
 
 final class NumberTest extends MyCase
 {
-    public function testBoolean(): void
+    /**
+     * @throws \ReflectionException
+     */
+    public function testNumber(): void
     {
         $i12 = new \DBUnt1tled\VO\VObjects\Scalar\Number(12);
         $this->assertEquals(12, $i12->getValue());
@@ -22,6 +25,7 @@ final class NumberTest extends MyCase
         $fNot15p13 = \DBUnt1tled\VO\VObjects\Scalar\Number::createFromString('-15.13');
         $this->assertEquals(-15.13, $fNot15p13->getValue());
     }
+
     public function testExcept(): void
     {
         $this->assertException(InvalidVOArgumentException::class, function () {

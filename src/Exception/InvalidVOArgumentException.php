@@ -22,7 +22,7 @@ class InvalidVOArgumentException extends \InvalidArgumentException implements Ex
     public function __construct(string $message = '', $object = null, int $code = 0, Throwable $previous = null)
     {
         if (!$message) {
-            throw new $this('Unknown '. \get_class($this));
+            throw new $this('Unknown '.\get_class($this));
         }
         $this->object = $object;
         parent::__construct($message, $code, $previous);
@@ -38,8 +38,8 @@ class InvalidVOArgumentException extends \InvalidArgumentException implements Ex
             echo '<pre>';
             var_dump($this->object);
             echo '</pre>';
-            $this->message = $this->message . "\nDebug Info: " . ob_get_clean();
+            $this->message = $this->message."\nDebug Info: ".ob_get_clean();
         }
-        return get_class($this) . " '{$this->message}'\n in {$this->file}({$this->line})\n{$this->getTraceAsString()}";
+        return get_class($this)." '{$this->message}'\n in {$this->file}({$this->line})\n{$this->getTraceAsString()}";
     }
 }

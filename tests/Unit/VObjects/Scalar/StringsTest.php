@@ -10,7 +10,10 @@ use DBUnt1tled\VO\Exception\InvalidVOArgumentException;
 
 final class StringsTest extends MyCase
 {
-    public function testBoolean(): void
+    /**
+     * @throws \ReflectionException
+     */
+    public function testStrings(): void
     {
         $string = '  Aaa  ';
         $s2spAaaa2sp = new \DBUnt1tled\VO\VObjects\Scalar\Strings($string);
@@ -27,6 +30,9 @@ final class StringsTest extends MyCase
         $this->assertEquals('aaa', $sAaa->toLowerCase()->getValue());
     }
 
+    /**
+     * @throws \ReflectionException
+     */
     public function testIsEmpty():void
     {
         $string1 = new \DBUnt1tled\VO\VObjects\Scalar\Strings('  Aaa  ');
@@ -35,7 +41,7 @@ final class StringsTest extends MyCase
         $this->assertFalse($string1->trim()->isEmpty());
     }
 
-    public function testExcept1(): void
+    public function testExcept(): void
     {
         $this->assertException(InvalidVOArgumentException::class, function () {
             new \DBUnt1tled\VO\VObjects\Scalar\Strings(1.00);

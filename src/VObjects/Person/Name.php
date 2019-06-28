@@ -41,10 +41,10 @@ class Name extends ValueObjectComplex
         /** @var ValueObjectInterface $value*/
         parent::guard($other[0]);
         /** @var ValueObjectInterface[] $other*/
-        if (mb_strlen($value->getValue())< self::NAME_MIN_LENGTH) {
+        if (mb_strlen($value->getValue()) < self::NAME_MIN_LENGTH) {
             throw new InvalidVOArgumentException(sprintf('First name must contain a minimum of %s symbols.', self::NAME_MIN_LENGTH), $value);
         }
-        if (mb_strlen($other[0]->getValue())< self::NAME_MIN_LENGTH) {
+        if (mb_strlen($other[0]->getValue()) < self::NAME_MIN_LENGTH) {
             throw new InvalidVOArgumentException(sprintf('Last name must contain a minimum of %s symbols.', self::NAME_MIN_LENGTH), $value);
         }
     }
@@ -81,7 +81,7 @@ class Name extends ValueObjectComplex
      */
     public function getFullName(): string
     {
-        return $this->firstName->getValue() .' '.$this->lastName->getValue();
+        return $this->firstName->getValue().' '.$this->lastName->getValue();
     }
 
     /**

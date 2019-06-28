@@ -11,6 +11,9 @@ use DBUnt1tled\VO\VObjects\Scalar\Integer;
 
 final class AgeTest extends MyCase
 {
+    /**
+     * @throws \ReflectionException
+     */
     public function testAge(): void
     {
         $a12 = new Age(new Integer(12));

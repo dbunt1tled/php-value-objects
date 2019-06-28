@@ -11,7 +11,10 @@ use DBUnt1tled\VO\VObjects\Scalar\Strings;
 
 final class Md5Test extends MyCase
 {
-    public function testName(): void
+    /**
+     * @throws \ReflectionException
+     */
+    public function testMd5(): void
     {
         $md51 = new Md5(new Strings('0c0b3da4ac402bd86191d959be081114'));
         $this->assertEquals('0c0b3da4ac402bd86191d959be081114', $md51->getValue());

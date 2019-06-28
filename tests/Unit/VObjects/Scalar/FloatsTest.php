@@ -10,7 +10,10 @@ use DBUnt1tled\VO\Exception\InvalidVOArgumentException;
 
 final class FloatsTest extends MyCase
 {
-    public function testFloat(): void
+    /**
+     * @throws \ReflectionException
+     */
+    public function testFloats(): void
     {
         $float = new \DBUnt1tled\VO\VObjects\Scalar\Floats(0.02);
         $float1 = \DBUnt1tled\VO\VObjects\Scalar\Floats::createFromInt(1);

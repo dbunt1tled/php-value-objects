@@ -11,7 +11,10 @@ use DBUnt1tled\VO\VObjects\Scalar\Integer;
 
 final class TcpPortTest extends MyCase
 {
-    public function testName(): void
+    /**
+     * @throws \ReflectionException
+     */
+    public function testTcpPort(): void
     {
         $port1 = new TcpPort(new Integer(80));
         $this->assertEquals(80, $port1->getValue());

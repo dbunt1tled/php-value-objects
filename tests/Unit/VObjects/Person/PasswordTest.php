@@ -11,7 +11,10 @@ use DBUnt1tled\VO\VObjects\Scalar\Strings;
 
 final class PasswordTest extends MyCase
 {
-    public function testName(): void
+    /**
+     * @throws \ReflectionException
+     */
+    public function testPassword(): void
     {
         $password1 = new Password(new Strings('1J#ohn2f3G7'));
         $this->assertEquals('1J#ohn2f3G7', $password1->getValue());

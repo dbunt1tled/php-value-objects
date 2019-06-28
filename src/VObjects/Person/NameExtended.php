@@ -34,7 +34,7 @@ class NameExtended extends Name
     public function guardExtended($value, ...$other): void
     {
         /** @var ValueObjectInterface $value*/
-        if (mb_strlen($value->getValue())< self::NAME_MIN_LENGTH) {
+        if (mb_strlen($value->getValue()) < self::NAME_MIN_LENGTH) {
             throw new InvalidVOArgumentException(sprintf('Middle name must contain a minimum of %s symbols.', self::NAME_MIN_LENGTH), $value);
         }
     }
@@ -64,6 +64,6 @@ class NameExtended extends Name
      */
     public function getFullName(): string
     {
-        return $this->getFirstName() .' '.$this->getMiddleName() .' '. $this->getLastName();
+        return $this->getFirstName().' '.$this->getMiddleName().' '.$this->getLastName();
     }
 }
