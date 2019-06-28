@@ -36,7 +36,7 @@ class InvalidVOArgumentException extends \InvalidArgumentException implements Ex
         if ($this->object !== null) {
             ob_start();
             echo '<pre>';
-            var_dump($this->object);
+            print_r($this->object);
             echo '</pre>';
             $this->message = $this->message."\nDebug Info: ".ob_get_clean();
         }
