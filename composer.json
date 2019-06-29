@@ -1,7 +1,7 @@
 {
   "name": "dbunt1tled/php-value-objects",
   "description": "PHP Value objects to use for DDD domains.",
-  "license": "Apache-2.0",
+  "license": "MIT",
   "keywords": ["vo", "value object", "architecture", "domain driven design"],
   "authors": [
     {
